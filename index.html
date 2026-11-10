@@ -3,90 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Трансцендентальная Медитация в Азербайджане | Степан Годына</title>
+    <title>Трансцендентальная Медитация в Азербайджане | Годына Степан Николаевич</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900">
 
-    <!-- ========================================== -->
-    <!-- ПОЛНАЯ РУССКАЯ ВЕРСИЯ                      -->
-    <!-- ========================================== -->
+    <!-- ================================================================= -->
+    <!-- ПОЛНАЯ РАЗВЁРНУТАЯ РУССКАЯ ВЕРСИЯ (ВСЕ 14 БЛОКОВ БЕЗ СОКРАЩЕНИЙ)   -->
+    <!-- ================================================================= -->
     <div id="page-ru">
-        <!-- ШАПКА САЙТА (RU) -->
-        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+
+        <!-- 1. ШАПКА САЙТА (RU) -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-white font-serif font-bold text-lg shadow-md">
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-white font-serif font-bold text-lg shadow-md shrink-0">
                         СГ
                     </div>
                     <div>
                         <span class="block font-serif font-bold text-lg text-slate-900 leading-tight">Степан Годына</span>
                         <span class="block text-xs font-medium text-amber-700 tracking-wider uppercase">Учитель ТМ в Азербайджане</span>
                     </div>
-                </div>
+                </a>
 
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <!-- Десктопное меню -->
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium text-slate-600">
                     <a href="#about-ru" class="hover:text-amber-700 transition">О методе</a>
+                    <a href="#benefits-ru" class="hover:text-amber-700 transition">Результаты</a>
                     <a href="#science-ru" class="hover:text-amber-700 transition">Наука</a>
+                    <a href="#teacher-ru" class="hover:text-amber-700 transition">Об учителе</a>
                     <a href="#jyotish-ru" class="hover:text-amber-700 transition">Джйотиш и Асаны</a>
-                    <a href="#schedule-ru" class="hover:text-amber-700 transition">Курсы</a>
-                    <a href="#contact-ru" class="hover:text-amber-700 transition">Контакты</a>
+                    <a href="#steps-ru" class="hover:text-amber-700 transition">7 шагов</a>
+                    <a href="#venues-ru" class="hover:text-amber-700 transition">Баку и Гянджа</a>
+                    <a href="#reviews-ru" class="hover:text-amber-700 transition">Отзывы</a>
+                    <a href="#faq-ru" class="hover:text-amber-700 transition">Вопросы</a>
                 </nav>
 
                 <div class="flex items-center space-x-3">
-                    <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+                    <!-- Переключатель языков -->
                     <div class="inline-flex rounded-full bg-slate-100 p-1 border border-slate-200">
-                        <button onclick="switchLang('ru')" class="px-3 py-1 rounded-full bg-amber-600 text-white text-xs font-bold shadow-sm transition">
+                        <button onclick="switchLang('ru')" class="px-3.5 py-1 rounded-full bg-amber-600 text-white text-xs font-bold shadow-sm transition">
                             RU
                         </button>
-                        <button onclick="switchLang('az')" class="px-3 py-1 rounded-full text-slate-600 hover:text-slate-900 text-xs font-bold transition">
+                        <button onclick="switchLang('az')" class="px-3.5 py-1 rounded-full text-slate-600 hover:text-slate-900 text-xs font-bold transition">
                             AZ
                         </button>
                     </div>
+
                     <a href="#contact-ru" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-amber-700 transition shadow-sm">
                         Записаться
                     </a>
+
+                    <!-- Кнопка мобильного меню -->
+                    <button onclick="toggleMobileMenu('ru')" class="xl:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Меню">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
+            </div>
+
+            <!-- Выпадающее мобильное меню (RU) -->
+            <div id="mobile-menu-ru" class="hidden xl:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2 shadow-lg">
+                <a href="#about-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">О методе ТМ</a>
+                <a href="#benefits-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Результаты практики</a>
+                <a href="#science-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Научные исследования</a>
+                <a href="#teacher-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Об учителе</a>
+                <a href="#jyotish-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Джйотиш и Асаны Махариши</a>
+                <a href="#steps-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">7 шагов обучения</a>
+                <a href="#venues-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Обучение в Баку и Гяндже</a>
+                <a href="#reviews-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Отзывы учеников</a>
+                <a href="#faq-ru" onclick="toggleMobileMenu('ru')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Частые вопросы</a>
+                <a href="#contact-ru" onclick="toggleMobileMenu('ru')" class="block w-full text-center mt-3 py-3 rounded-full bg-amber-600 text-white text-sm font-bold">Записаться на лекцию</a>
             </div>
         </header>
 
-        <!-- ГЛАВНЫЙ ЭКРАН (RU) -->
-        <section class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-amber-50/50 via-white to-slate-50">
+        <!-- 2. ГЛАВНЫЙ ЭКРАН (RU) -->
+        <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-amber-50/70 via-white to-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                        <div class="inline-flex items-center space-x-2 bg-amber-100/80 text-amber-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
                             <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
                             <span>Официальное обучение в Баку и Гяндже</span>
                         </div>
                         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                            Трансцендентальная Медитация
+                            Трансцендентальная Медитация в Азербайджане
                         </h1>
-                        <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                            Простой, естественный и научно подтверждённый метод для освобождения от глубокого стресса, восстановления энергии и раскрытия полного потенциала ума.
+                        <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Простая, естественная и научно подтверждённая умственная техника для глубокого отдыха нервной системы, полного освобождения от стресса, укрепления здоровья и раскрытия творческого потенциала сознания.
                         </p>
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto lg:mx-0 pt-2">
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">20 мин</span>
+                                <span class="text-xs text-slate-500">дважды в день</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">600+</span>
+                                <span class="text-xs text-slate-500">научных работ</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">250+</span>
+                                <span class="text-xs text-slate-500">университетов</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">10 млн+</span>
+                                <span class="text-xs text-slate-500">обучившихся</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-3">
                             <a href="#contact-ru" class="w-full sm:w-auto px-8 py-4 rounded-full bg-amber-600 text-white font-semibold hover:bg-amber-700 transition shadow-lg shadow-amber-600/20 text-center">
                                 Записаться на вводную лекцию
                             </a>
-                            <a href="#about-ru" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition text-center">
-                                Подробнее о методе
+                            <a href="#steps-ru" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition text-center">
+                                Как проходит курс (7 шагов)
                             </a>
                         </div>
                     </div>
 
                     <div class="lg:col-span-5 flex justify-center">
-                        <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
-                            <img src="stepan.png" alt="Степан Годына" class="w-full h-full object-cover object-top" onerror="this.src='stepan1.png';">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex items-end p-6">
+                        <div class="relative w-72 h-96 sm:w-80 sm:h-[460px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
+                            <img src="stepan.png" alt="Годына Степан Николаевич" class="w-full h-full object-cover object-top" onerror="this.src='stepan1.png';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/15 to-transparent flex items-end p-6">
                                 <div class="text-white">
-                                    <p class="font-serif font-bold text-xl">Степан Годына</p>
-                                    <p class="text-xs text-amber-200 uppercase tracking-widest font-semibold">Сертифицированный учитель ТМ</p>
+                                    <p class="font-serif font-bold text-xl">Годына Степан Николаевич</p>
+                                    <p class="text-xs text-amber-300 uppercase tracking-widest font-semibold mt-0.5">Сертифицированный учитель ТМ</p>
+                                    <p class="text-xs text-slate-300 mt-1">Баку • Гянджа, Азербайджан</p>
                                 </div>
                             </div>
                         </div>
@@ -95,185 +144,713 @@
             </div>
         </section>
 
-        <!-- О МЕТОДЕ ТМ (RU) -->
+        <!-- 3. ЦИТАТА МАХАРИШИ МАХЕШ ЙОГИ (RU) -->
+        <section class="py-12 bg-slate-900 text-white border-y border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="font-serif italic text-xl sm:text-2xl text-amber-100 leading-relaxed">
+                    «Подобно тому, как нужно поливать корень дерева, чтобы зеленели все его ветви, листья и плоды, так и через Трансцендентальную Медитацию человек обращается к самому корню своей жизни — Чистому Сознанию, обогащая одновременно все сферы своего существования».
+                </p>
+                <p class="mt-4 text-xs uppercase tracking-widest text-amber-400 font-bold">
+                    — Махариши Махеш Йоги, основатель программы Трансцендентальной Медитации
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. ЧТО ТАКОЕ ТМ, ЧЕМ ОНА НЕ ЯВЛЯЕТСЯ И МЕТАФОРА ОКЕАНА (RU) -->
         <section id="about-ru" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Древняя традиция в современном мире</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Древняя Ведическая наука сознания</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Что такое Трансцендентальная Медитация?</h2>
                     <p class="text-slate-600 text-lg leading-relaxed">
-                        ТМ практикуется по 20 минут дважды в день, сидя удобно с закрытыми глазами. Это не религия, не философия и не изменение образа жизни — это естественная умственная техника, возрождённая Махариши Махеш Йоги.
+                        Трансцендентальная Медитация (ТМ) — это простая, естественная, не требующая усилий техника, которая практикуется по 20 минут дважды в день (утром и вечером), сидя удобно в кресле с закрытыми глазами.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- 3 ключевых принципа -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                     <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">01</div>
-                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Без усилий и концентрации</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">В отличие от других практик, ТМ не требует контроля мыслей или сосредоточения. Ум естественным образом успокаивается и приходит к состоянию внутренней тишины.</p>
+                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Полное отсутствие усилий</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            В отличие от практик концентрации, визуализации или контроля дыхания, в ТМ не нужно бороться с мыслями или пытаться «опустошить ум». Процесс основан на естественном стремлении ума к полю большего покоя, энергии и удовлетворения.
+                        </p>
                     </div>
                     <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">02</div>
-                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Отдых глубже сна</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Во время практики тело получает состояние глубокого покоя, благодаря чему растворяются даже самые глубоко укоренившиеся стрессы и усталость нервной системы.</p>
+                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Опыт Чистого Сознания</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            «Трансцендировать» — значит «выходить за пределы». Во время практики активный ум спонтанно успокаивается, проходит через более тонкие уровни мысли и выходит за пределы мышления — в состояние Чистого Сознания, безграничного покоя и созидательного разума.
+                        </p>
                     </div>
                     <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">03</div>
-                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Ясность и созидательность</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Регулярная практика пробуждает скрытые резервы мозга, повышает концентрацию, эмоциональную устойчивость, творческое мышление и радость жизни.</p>
+                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Глубочайший отдых для тела</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            В состоянии бодрствующего покоя потребление кислорода и уровень гормонов стресса стремительно снижаются. Организм получает уникальную возможность растворить даже самые глубокие хронические зажимы, которые не уходят во время обычного сна.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Чем ТМ НЕ является -->
+                <div class="bg-amber-50/70 rounded-3xl p-8 sm:p-10 border border-amber-200/80 mb-16">
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6 text-center">Важно знать: чем Трансцендентальная Медитация НЕ является</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Не религия</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">ТМ не требует веры и не вступает в противоречие ни с какими религиозными или светскими убеждениями.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Не философия</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">Это чисто практическая психофизиологическая техника, результат которой ощущается непосредственно на опыте.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Не смена образа жизни</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">От вас не требуется менять привычный рацион питания, распорядок дня, одежду или круг общения.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Не концентрация</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">Никакого напряжения глаз, удерживания образов или контроля мыслей — практике легко обучается даже ребёнок.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Метафора океана -->
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl mb-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 space-y-4">
+                            <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Механика трансцендирования</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold">Как волны на поверхности океана</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Представьте себе глубокий океан: на его поверхности постоянно движутся волны активных мыслей, эмоций, планов и тревог. Если пытаться силой удержать волны руками (как при попытке подавить мысли), волнение на поверхности только возрастёт. Но на глубине океан всегда остаётся абсолютно безмолвным и неподвижным. Трансцендентальная Медитация позволяет уму естественным образом опуститься с бурной поверхности в тихую глубину собственного сознания и вернуться в жизнь полным сил.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                            <a href="#contact-ru" class="px-7 py-4 rounded-full bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition text-center shadow-lg">
+                                Посетить вводную лекцию
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. СРАВНИТЕЛЬНАЯ ТАБЛИЦА 3 ВИДОВ МЕДИТАЦИИ (RU) -->
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">Научная классификация: 3 категории медитации</h3>
+                        <p class="text-slate-600 text-sm mt-2">Нейрофизиологи выделяют три совершенно разных типа практик в зависимости от работы внимания и волн головного мозга (ЭЭГ):</p>
+                    </div>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                        <table class="w-full text-left border-collapse bg-white text-sm">
+                            <thead>
+                                <tr class="bg-slate-900 text-white">
+                                    <th class="p-4 sm:p-5 font-serif text-base">Тип практики</th>
+                                    <th class="p-4 sm:p-5 font-serif text-base">Механизм работы ума</th>
+                                    <th class="p-4 sm:p-5 font-serif text-base">Усилия и картина ЭЭГ мозга</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200">
+                                <tr>
+                                    <td class="p-4 sm:p-5 font-bold text-slate-800">1. Фокусированное внимание (Концентрация)</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Удерживание внимания на дыхании, точке, пламени свечи или принудительная остановка мыслей.</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Высокое усилие. Быстрые бета- и гамма-волны (20–50 Гц), как при напряжённой умственной работе.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 sm:p-5 font-bold text-slate-800">2. Открытое наблюдение (Созерцание / Mindfulness)</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Отстранённое отслеживание текущих мыслей, эмоций и ощущений без вовлечения в них.</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Среднее усилие. Локальные тета-волны (4–8 Гц), внимание остаётся привязанным к потоку мыслей.</td>
+                                </tr>
+                                <tr class="bg-amber-50/90">
+                                    <td class="p-4 sm:p-5 font-bold text-amber-900">3. Автоматическое самотрансцендирование (ТМ)</td>
+                                    <td class="p-4 sm:p-5 text-amber-950 font-medium">Естественный выход за пределы процесса мышления в состояние безмолвного Чистого Сознания.</td>
+                                    <td class="p-4 sm:p-5 text-amber-950 font-medium">Ноль усилий. Синхронные когерентные альфа-1 волны (8–10 Гц) по всей коре головного мозга.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- НАУЧНЫЕ ИССЛЕДОВАНИЯ (RU) -->
-        <section id="science-ru" class="py-20 bg-slate-50 border-y border-slate-100">
+        <!-- 6. РЕЗУЛЬТАТЫ ПРАКТИКИ В 4 СФЕРАХ ЖИЗНИ (RU) -->
+        <section id="benefits-ru" class="py-20 bg-slate-50 border-t border-slate-200/70">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Доказательная база</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Подтверждено мировой наукой</h2>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Комплексный эффект</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Что даёт регулярная практика ТМ?</h2>
                     <p class="text-slate-600 text-lg">
-                        Более 600 научных исследований в 250 независимых университетах и исследовательских центрах мира (включая Гарвард, Стэнфорд и Национальный институт здоровья США) доказали эффективность ТМ.
+                        Дважды в день по 20 минут глубокого погружения во внутренний покой преображают работу мозга, физиологию, эмоциональный фон и деловую активность.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">-48%</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Здоровье сердца</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Снижение риска сердечно-сосудистых проблем и нормализация артериального давления.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">-50%</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Снятие тревожности</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Существенное снижение уровня гормона стресса (кортизола) уже с первых недель практики.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">ЭЭГ</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Когерентность мозга</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Синхронизация работы правого и левого полушарий мозга, рост альфа-волн спокойного бодрствования.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">+100%</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Глубокий сон</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Быстрое засыпание, избавление от бессонницы и полноценное восстановление энергии за ночь.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ДЖЙОТИШ И АСАНЫ МАХАРИШИ (RU) -->
-        <section id="jyotish-ru" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Целостный ведический подход</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Джйотиш и Асаны Махариши</h2>
-                    <p class="text-slate-600 text-lg">
-                        Гармоничное развитие сознания и тела с помощью классических дисциплин Ведической науки Махариши.
-                    </p>
-                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="p-8 rounded-2xl bg-amber-50/60 border border-amber-100">
-                        <span class="inline-block px-3 py-1 rounded-full bg-amber-200/70 text-amber-900 text-xs font-bold uppercase mb-4">Физиология и дыхание</span>
-                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Асаны Махариши и Пранаяма</h3>
-                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
-                            Специальный комплекс мягких ведических упражнений (Асан Махариши) и дыхательной техники (Пранаямы) служит идеальной подготовкой к медитации.
-                        </p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Снимает поверхностное мышечное и физическое напряжение</li>
-                            <li>• Приводит в баланс ум и тело перед практикой ТМ</li>
-                            <li>• Подходит для любого возраста и уровня физической подготовки</li>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Сфера 01 • Ум и карьера</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Ясность мышления, память и продуктивность</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Острота внимания:</strong> способность легко фокусироваться на главном, не распыляясь на информационный шум.</li>
+                            <li><strong class="text-slate-800">✓ Творческий интеллект:</strong> спонтанное нахождение нестандартных, точных решений в бизнесе и профессиональной деятельности.</li>
+                            <li><strong class="text-slate-800">✓ Улучшение памяти:</strong> повышение скорости усвоения новой информации у студентов, специалистов и руководителей.</li>
+                            <li><strong class="text-slate-800">✓ Эффективность без спешки:</strong> выполнение большего объёма задач при сохранении свежести ума до самого вечера.</li>
                         </ul>
                     </div>
-                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="inline-block px-3 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold uppercase mb-4">Ведическая астрология</span>
-                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Джйотиш — знание циклов времени</h3>
-                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
-                            Консультации по классической системе Махариши Парашары («Брихат Парашара Хора Шастра»): глубокий разбор натальной карты Раши, дробной карты Навамша (D9), Накшатр и планетных периодов Даша.
-                        </p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Понимание сильных сторон личности и жизненного предназначения</li>
-                            <li>• Благоприятное планирование важных начинаний и периодов</li>
-                            <li>• Гармонизация жизненных сфер через развитие сознания</li>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Сфера 02 • Тело и здоровье</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Здоровое сердце, крепкий сон и иммунитет</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Защита сердца и сосудов:</strong> естественная нормализация артериального давления и снижение риска гипертонии.</li>
+                            <li><strong class="text-slate-800">✓ Избавление от бессонницы:</strong> быстрое засыпание и глубокий, по-настоящему восстанавливающий ночной сон.</li>
+                            <li><strong class="text-slate-800">✓ Снятие психосоматики:</strong> уменьшение головных болей напряжения, мышечных спазмов и хронической усталости.</li>
+                            <li><strong class="text-slate-800">✓ Омоложение организма:</strong> замедление биологического старения клеток и укрепление иммунной системы.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Сфера 03 • Эмоции и антистресс</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Внутренняя невозмутимость и радость жизни</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Уход фоновой тревоги:</strong> растворение беспокойства, страхов, панических состояний и эмоционального выгорания.</li>
+                            <li><strong class="text-slate-800">✓ Эмоциональная устойчивость:</strong> внешние стрессы и кризисы перестают выводить вас из душевного равновесия.</li>
+                            <li><strong class="text-slate-800">✓ Свобода от вредных привычек:</strong> естественное снижение тяги к курению, алкоголю и стимуляторам.</li>
+                            <li><strong class="text-slate-800">✓ Прилив внутренней радости:</strong> пробуждение спокойной уверенности, оптимизма и полноты восприятия жизни.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Сфера 04 • Отношения и окружение</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Гармония в семье и коллективе</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Теплота и терпимость:</strong> когда уходит внутренняя усталость, исчезают вспышки раздражения на близких людей.</li>
+                            <li><strong class="text-slate-800">✓ Искусство диалога:</strong> способность слышать собеседника и находить взаимовыгодные решения без конфликтов.</li>
+                            <li><strong class="text-slate-800">✓ Лидерское спокойствие:</strong> руководитель, практикующий ТМ, передаёт уверенность и слаженность всей команде.</li>
+                            <li><strong class="text-slate-800">✓ Вклад в общество:</strong> каждый медитирующий человек распространяет вокруг себя атмосферу мира и согласия.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- КАК ПРОХОДИТ ОБУЧЕНИЕ В БАКУ И ГЯНДЖЕ (RU) -->
-        <section id="schedule-ru" class="py-20 bg-slate-50 border-t border-slate-100">
+        <!-- 7. НАУЧНЫЕ ИССЛЕДОВАНИЯ (600+ РАБОТ) (RU) -->
+        <section id="science-ru" class="py-20 bg-white border-t border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Структура курса</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Как проходит обучение в Баку и Гяндже</h2>
-                    <p class="text-slate-600 text-lg">
-                        Обучение проводится лично сертифицированным учителем в течение 4 последовательных дней (включая регулярные встречи в Баку, в том числе на базе Crown Wellness Club, и курсы в Гяндже).
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Мировая доказательная медицина</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Более 600 научных исследований в 250 университетах</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        ТМ — самая изученная техника медитации в истории науки. Исследования проводились в Гарвардской медицинской школе, Стэнфорде, Йеле, Калифорнийском университете (UCLA) и Национальном институте здоровья США (NIH), и были опубликованы в ведущих рецензируемых журналах (<em>Lancet, JAMA, Stroke, Hypertension</em>).
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Шаг 1</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Вводная лекция</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Знакомство с методом ТМ, научными исследованиями и возможностями практики. Участие свободное по предварительной записи.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-48%</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Снижение риска инфаркта и инсульта</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Многолетнее исследование Национального института здоровья США (NIH) и заключение Американской кардиологической ассоциации (AHA) подтвердили снижение смертности, инфарктов и инсультов на 48%.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Шаг 2</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Подготовка и интервью</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Особенности механики техники ТМ и короткое личное собеседование с учителем перед началом курса.</p>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-30..50%</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Снижение гормона стресса кортизола</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Биохимический анализ показывает резкое падение уровня кортизола и плазменного лактата уже в течение 20 минут практики ТМ, в то время как при обычном отдыхе с закрытыми глазами он почти не меняется.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Шаг 3</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Личное обучение</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Индивидуальная передача техники медитации один на один с сертифицированным учителем.</p>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">ЭЭГ α1</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Глобальная когерентность мозга</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Электроэнцефалограмма фиксирует упорядоченную, синхронную работу правого и левого полушарий, а также лобных долей мозга в диапазоне альфа-1 (8–10 Гц), что коррелирует с высоким IQ и креативностью.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Шаг 4</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Проверка практики</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Три групповых занятия для проверки правильности практики, ответов на вопросы и закрепления стабильного опыта.</p>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-12 лет</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Омоложение биологического возраста</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">По данным исследования (<em>International Journal of Neuroscience</em>), люди, практикующие ТМ более 5 лет, имеют биологический возраст (давление, зрение, слух, тонус сосудов) в среднем на 12 лет моложе хронологического.</p>
+                    </div>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">в 2 раза</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Снижение тревожности и выгорания</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Метаанализ 146 независимых научных работ в Стэнфордском университете показал, что ТМ в два раза эффективнее снимает хроническую тревожность по сравнению с другими методами релаксации.</p>
+                    </div>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-42%</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Быстрое избавление от бессонницы</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Исследования фиксируют сокращение времени засыпания более чем в два раза и глубокую нормализацию фаз ночного сна уже в первый месяц регулярной практики.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- КОНТАКТЫ (RU) -->
+        <!-- 8. ОБ УЧИТЕЛЕ И ТРАДИЦИИ МАХАРИШИ (RU) -->
+        <section id="teacher-ru" class="py-20 bg-amber-50/50 border-y border-amber-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100">
+                            <img src="stepan1.png" alt="Годына Степан Николаевич" class="w-full h-80 sm:h-96 object-cover object-top rounded-2xl mb-6" onerror="this.src='stepan.png';">
+                            <div class="space-y-1.5 text-center">
+                                <h3 class="font-serif font-bold text-2xl text-slate-900">Годына Степан Николаевич</h3>
+                                <p class="text-xs font-bold uppercase tracking-widest text-amber-700">Сертифицированный учитель ТМ в Азербайджане</p>
+                                <p class="text-xs text-slate-500 pt-1">Официальные курсы в Баку и Гяндже</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Аутентичная передача знаний</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                            Личное обучение один на один в соответствии с традицией Махариши
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            Трансцендентальная Медитация была возрождена и открыта миру великим ведическим учёным и учителем <strong>Махариши Махеш Йоги</strong>. Чтобы каждый человек получал подлинный опыт безмолвия ума без искажений и напряжения, техника ТМ никогда не передаётся массово по книгам или видео — обучение всегда проходит индивидуально с сертифицированным учителем.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Я родился в Гяндже и провожу официальные вводные лекции, 4-дневные базовые курсы обучения ТМ, групповые занятия и презентации в <strong>Баку</strong> (в том числе на базе <em>Crown Wellness Club</em>) и в <strong>Гяндже</strong>. Моя цель — передать вам практику в её первозданной чистоте и простоте, чтобы она радовала вас и приносила ощутимую пользу каждый день.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Наряду с преподаванием Трансцендентальной Медитации, я обучаю комплексу <strong>Асан Махариши</strong> как бережной физической подготовке к медитации и провожу глубокие индивидуальные консультации по ведической астрологии <strong>Джйотиш</strong> на основе классических принципов Махариши Парашары.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                <span class="font-bold text-slate-900 block mb-1">✓ Персональная передача</span>
+                                <span class="text-xs text-slate-600">Индивидуальный подбор мантры и бережное ведение через все 7 шагов обучения.</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                <span class="font-bold text-slate-900 block mb-1">✓ Пожизненная поддержка</span>
+                                <span class="text-xs text-slate-600">Бесплатные проверки правильности практики («чекинги») и встречи выпускников.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. ДЖЙОТИШ И АСАНЫ МАХАРИШИ (RU) -->
+        <section id="jyotish-ru" class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Целостный ведический подход</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">Джйотиш и Асаны Махариши</h2>
+                    <p class="text-slate-300 text-lg">
+                        Гармоничное объединение трех ведических дисциплин — Трансцендентальной Медитации, Асан Махариши и астрологии Джйотиш — даёт целостный инструмент для развития сознания, здоровья тела и мудрого планирования жизни.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Асаны Махариши -->
+                    <div class="p-8 sm:p-10 rounded-3xl bg-slate-800/90 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase mb-4">Физическая подготовка к медитации</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">Асаны Махариши и Пранаяма</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Специально выстроенная Махариши последовательность мягких, комфортных поз йоги (Асан) и спокойного ведического дыхания (Пранаямы), выполняемая непосредственно перед 20 минутами Трансцендентальной Медитации.
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Мягко снимает накопленную за день мышечную скованность в позвоночнике, шее и суставах без силовых перегрузок</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Уравновешивает потоки дыхания и успокаивает вегетативную нервную систему, делая погружение в ТМ ещё более глубоким</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Создаёт тонкую нейромышечную интеграцию ума и тела, доступную в любом возрасте и при любой комплекции</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#contact-ru" class="inline-flex items-center text-sm font-semibold text-amber-400 hover:text-amber-300">
+                            Записаться на занятие по Асанам Махариши →
+                        </a>
+                    </div>
+
+                    <!-- Джйотиш -->
+                    <div class="p-8 sm:p-10 rounded-3xl bg-slate-800/90 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase mb-4">Классическая школа Махариши Парашары</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">Ведическая астрология Джйотиш</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Глубокий аналитический разбор индивидуального гороскопа рождения, основанный на первоисточнике классической традиции — фундаментальном труде Махариши Парашары <em>«Брихат Парашара Хора Шастра»</em>.
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Комплексный анализ карты <strong>Раши (D1)</strong>, положения планет (Грах) в 12 домах (Бхавах) и дробной карты <strong>Навамша (D9)</strong></span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Детальное исследование лунных созвездий (<strong>27 Накшатр</strong>) и расчёт планетных периодов и подпериодов <strong>Вимшоттари Даша</strong></span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Ясное понимание жизненного предназначения, карьеры, финансов, совместимости и благоприятных периодов для важных решений</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#contact-ru" class="inline-flex items-center text-sm font-semibold text-amber-400 hover:text-amber-300">
+                            Заказать индивидуальный разбор натальной карты →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. 7 ШАГОВ ОБУЧЕНИЯ И ПОЖИЗНЕННАЯ ПОДДЕРЖКА (RU) -->
+        <section id="steps-ru" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Международный стандарт курса</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Программа обучения: 7 последовательных шагов</h2>
+                    <p class="text-slate-600 text-lg">
+                        Структура курса выверена до мелочей: после вводного знакомства следуют 4 последовательных дня по 1,5 часа, за которые вы полностью осваиваете технику ТМ на всю жизнь.
+                    </p>
+                </div>
+
+                <!-- Шаги 1-3 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-7 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase mb-3">Шаг 1 • Бесплатно</span>
+                        <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Вводная лекция (60 мин)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Знакомство с учителем, обзор того, что даёт Трансцендентальная Медитация для здоровья, освобождения от стресса и развития потенциала мозга, а также ответы на ваши вопросы.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase mb-3">Шаг 2 • Подготовка</span>
+                        <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Подготовительная лекция (45 мин)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Практическое объяснение механики ТМ: почему эта техника работает без усилий, чем она отличается от других видов медитации и откуда происходит традиция учителей.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase mb-3">Шаг 3 • Индивидуально</span>
+                        <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Личное интервью (10–15 мин)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Короткая индивидуальная беседа с учителем сразу после подготовительной лекции для личного знакомства и выбора удобного времени вашего обучения.</p>
+                    </div>
+                </div>
+
+                <!-- Шаги 4-7 -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 border border-amber-200 shadow-md mb-8">
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6 text-center">4 последовательных дня основного практического курса (Шаги 4–7)</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="p-6 rounded-2xl bg-amber-50/70 border border-amber-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Шаг 4 • День 1</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Личное обучение</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">Индивидуальное занятие один на один с учителем (60–90 мин), на котором вам передаётся ваша личная мантра и вы сразу получаете первый глубокий опыт медитации.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Шаг 5 • День 2</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Правильность практики</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">Первая групповая проверка: обсуждение вашей первой самостоятельной медитации дома и важные инструкции о том, как медитировать совершенно без усилий.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Шаг 6 • День 3</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Механика снятия стресса</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">Вторая групповая встреча: детальное объяснение того, как глубокий физиологический отдых растворяет накопленные стрессы и нормализует работу нервной системы.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Шаг 7 • День 4</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Раскрытие полного потенциала</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">Заключительная встреча курса: обзор развития высших состояний сознания при регулярной практике и ответы на все практические вопросы.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пожизненное сопровождение -->
+                <div class="bg-amber-100/70 rounded-2xl p-6 sm:p-8 border border-amber-200 text-center max-w-4xl mx-auto">
+                    <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Программа пожизненной поддержки после окончания курса</h4>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        После прохождения 4-дневного курса вы всегда можете обращаться к учителю для бесплатной индивидуальной или групповой проверки практики («чекинга»), чтобы убедиться, что ваша медитация остаётся лёгкой, естественной и приносит максимум результата.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. ОБУЧЕНИЕ В БАКУ И ГЯНДЖЕ (ЛОКАЦИИ) (RU) -->
+        <section id="venues-ru" class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">География проведения курсов</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Обучение и лекции в Баку и Гяндже</h2>
+                    <p class="text-slate-600 text-lg">
+                        Вы можете записаться на вводную лекцию, полный 4-дневный курс обучения ТМ или индивидуальную консультацию в удобном для вас городе.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-900 px-3.5 py-1 rounded-full text-xs font-bold uppercase mb-4">
+                            <span>📍 Город Баку</span>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Crown Wellness Club и залы Баку</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            В Баку регулярно проводятся вводные лекции по Трансцендентальной Медитации, открытые велнес-презентации (объединяющие ТМ, Джйотиш и Асаны Махариши), 4-дневные групповые курсы и поддерживающие встречи в комфортном пространстве <strong>Crown Wellness Club</strong>.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li>• Регулярные вводные лекции и открытые презентации</li>
+                            <li>• Личное обучение и 4-дневные групповые курсы</li>
+                            <li>• Занятия по Асанам Махариши и групповые медитации</li>
+                        </ul>
+                        <a href="#contact-ru" class="inline-block px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-amber-600 transition">
+                            Узнать расписание в Баку
+                        </a>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-900 px-3.5 py-1 rounded-full text-xs font-bold uppercase mb-4">
+                            <span>📍 Город Гянджа</span>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Обучение и консультации в Гяндже</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            В Гяндже проводятся регулярные вводные встречи, индивидуальное и групповое обучение Трансцендентальной Медитации, проверка практики для выпускников и личные консультации по ведической астрологии Джйотиш.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li>• Вводные лекции по предварительной записи</li>
+                            <li>• Полный 4-дневный курс обучения ТМ</li>
+                            <li>• Индивидуальные консультации и разбор карт Джйотиш</li>
+                        </ul>
+                        <a href="#contact-ru" class="inline-block px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-amber-600 transition">
+                            Записаться на встречу в Гяндже
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. ОТЗЫВЫ ПРАКТИКУЮЩИХ (6 ОТЗЫВОВ) (RU) -->
+        <section id="reviews-ru" class="py-20 bg-slate-50 border-t border-slate-200/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Живой опыт практикующих</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Отзывы прошедших обучение в Баку и Гяндже</h2>
+                    <p class="text-slate-600 text-lg">
+                        Впечатления людей разных профессий и возрастов, освоивших Трансцендентальную Медитацию на курсах Степана Николаевича.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «До знакомства со Степаном Николаевичем я думал, что медитация — это попытка силой заставить себя ни о чём не думать. На курсе в Баку я с первого дня почувствовал глубочайший отдых. Ушла постоянная спешка, нормализовался сон, появилось много сил для бизнеса и семьи».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Рустам А.</p>
+                            <p class="text-xs text-amber-700">Предприниматель, г. Баку</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Огромная благодарность за курс ТМ и знакомство с комплексом Асан Махариши. Утренняя и вечерняя практика по 20 минут стала моей любимой частью дня. Даже после самых напряжённых дежурств в клинике я быстро возвращаюсь в состояние внутреннего покоя и лёгкости».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Лейла М.</p>
+                            <p class="text-xs text-amber-700">Врач, г. Баку</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Проходил обучение ТМ и заказывал разбор натальной карты Джйотиш в Гяндже. Очень глубокая, точная и бережная подача материала. Давление перестало скакать от стрессов, голова ясная, на многие жизненные задачи открылись глаза».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Эльчин Г.</p>
+                            <p class="text-xs text-amber-700">Инженер, г. Гянджа</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Я работаю в сфере IT, и к вечеру голова обычно гудела от десятков задач. После 4-дневного курса ТМ у Степана Николаевича ушло ощущение выгорания. Вечерняя медитация снимает усталость так, будто я заново проснулся утром».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Тимур К.</p>
+                            <p class="text-xs text-amber-700">IT-специалист, г. Баку</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Много лет страдала от поверхностного, тревожного сна. Уже на третьем дне обучения в Гяндже заметила, что засыпаю спокойно и просыпаюсь до будильника полной энергии. Очень благодарна учителю за чуткость и поддержку».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Севиндж Р.</p>
+                            <p class="text-xs text-amber-700">Педагог, г. Гянджа</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Впечатлила вводная презентация в Crown Wellness Club. Сразу записалась на обучение и консультацию по Джйотиш. Техника ТМ оказалась удивительно простой, а разбор периодов Даша помог спокойно спланировать важный этап в карьере».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Нармина С.</p>
+                            <p class="text-xs text-amber-700">Дизайнер и маркетолог, г. Баку</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. ЧАСТЫЕ ВОПРОСЫ / FAQ (8 ВОПРОСОВ) (RU) -->
+        <section id="faq-ru" class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Ответы на частые вопросы</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Всё, что важно знать перед началом обучения</h2>
+                </div>
+                <div class="space-y-4">
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>1. Получится ли у меня медитировать, если у меня очень активный ум и постоянный поток мыслей?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Да, обязательно получится. В Трансцендентальной Медитации мы вообще не пытаемся остановить мысли или силой удерживать концентрацию. Техника использует природное свойство ума спонтанно стремиться к большему покою и удовольствию, поэтому даже самый беспокойный ум успокаивается легко на первом же личном занятии с учителем.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>2. Почему нельзя научиться ТМ самостоятельно по книге, видео в YouTube или приложению?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            При чтении книги или прослушивании аудиозаписи человек неизбежно начинает контролировать себя, оценивать процесс и прилагать умственные усилия, что удерживает мозг на поверхностном уровне. Только сертифицированный учитель ТМ знает, как индивидуально подобрать подходящую вам мантру и провести вас через живой опыт лёгкого, безмолвного трансцендирования.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>3. Что такое мантра в Трансцендентальной Медитации?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            В ТМ мантра — это особый ведический звук, не имеющий смыслового перевода, который подбирается учителем индивидуально для каждого ученика. Его единственная задача — служить мягким проводником («транспортным средством»), позволяющим вниманию плавно перейти от активного мышления к полной внутренней тишине.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>4. Связана ли ТМ с религией, философией или отказом от привычного образа жизни?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Нет. Трансцендентальная Медитация — это чисто практическая научная техника отдыха нервной системы и развития сознания. Она не требует изменения верований, диеты или жизненного уклада, и её практикуют миллионы людей самых разных культур и мировоззрений.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>5. Нужно ли сидеть на полу в позе лотоса или соблюдать полную тишину вокруг?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Никаких специальных поз не требуется: ТМ практикуется просто сидя в любом удобном кресле или на диване с закрытыми глазами. Более того, абсолютная тишина вокруг не нужна — обычный бытовой шум не мешает практике, поэтому медитировать можно дома, в офисе, в самолёте или поезде.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>6. Как выделить 20 минут дважды в день, если у меня очень плотный график?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Как говорил Махариши, это всё равно что сначала натянуть тетиву лука, чтобы стрела полетела быстро и точно в цель. 20 минут утренней и вечерней медитации дают такой заряд энергии и ясности, что в течение дня вы справляетесь с делами гораздо быстрее и экономите часы времени.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>7. Как быстро я почувствую первые результаты от практики?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Большинство учеников ощущают глубокое физическое расслабление, внутренний покой и улучшение ночного сна уже в первые 4 дня обучения. С каждой последующей неделей эффект накапливается, укрепляя нервную систему и стрессоустойчивость.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>8. Что нужно для записи на консультацию по ведической астрологии Джйотиш?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Для точного построения натальной карты Раши (D1), дробной карты Навамша (D9) и расчёта периодов Даша потребуются ваша дата рождения, максимально точное время рождения и город (место) рождения. Вы можете указать это при записи в WhatsApp.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. КОНТАКТЫ И РАСШИРЕННАЯ ФОРМА ЗАПИСИ В WHATSAPP (RU) -->
         <section id="contact-ru" class="py-20 bg-slate-900 text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-6">Начните обучение ТМ в Азербайджане</h2>
-                        <p class="text-slate-300 mb-8 leading-relaxed">
-                            Свяжитесь со мной напрямую, чтобы узнать дату ближайшей вводной лекции в Баку или Гяндже, либо записаться на индивидуальную консультацию.
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Прямая связь с учителем</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">Начните обучение ТМ в Баку или Гяндже</h2>
+                        <p class="text-slate-300 leading-relaxed">
+                            Заполните короткую форму или свяжитесь со мной напрямую по телефону и в WhatsApp, чтобы узнать дату ближайшей вводной лекции, записаться на 4-дневный курс или заказать консультацию по Джйотиш.
                         </p>
-                        <div class="space-y-4">
+                        <div class="space-y-5 pt-2">
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold">📞</div>
+                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">📞</div>
                                 <div>
-                                    <p class="text-xs text-slate-400 uppercase">Телефон / WhatsApp</p>
+                                    <p class="text-xs text-slate-400 uppercase">Телефон и WhatsApp</p>
                                     <a href="tel:+994505331629" class="text-lg font-semibold hover:text-amber-400 transition">+994 50 533 16 29</a>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold">✉️</div>
+                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">✉️</div>
                                 <div>
                                     <p class="text-xs text-slate-400 uppercase">Электронная почта</p>
                                     <a href="mailto:stepan0902@yahoo.com" class="text-lg font-semibold hover:text-amber-400 transition">stepan0902@yahoo.com</a>
                                 </div>
                             </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">🏛️</div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase">Места проведения занятий</p>
+                                    <p class="text-base font-medium text-slate-200">г. Баку (Crown Wellness Club) • г. Гянджа</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl">
-                        <h3 class="font-serif text-2xl font-bold mb-6">Записаться на лекцию или задать вопрос</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Ваше имя</label>
-                                <input type="text" placeholder="Введите ваше имя" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+
+                    <div class="lg:col-span-7">
+                        <div class="bg-slate-800 p-8 sm:p-10 rounded-3xl border border-slate-700 shadow-2xl">
+                            <h3 class="font-serif text-2xl font-bold mb-6">Быстрая запись через WhatsApp</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Ваше имя</label>
+                                        <input type="text" id="ru-name" placeholder="Введите ваше имя" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Ваш телефон</label>
+                                        <input type="tel" id="ru-phone" placeholder="+994 ..." class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Ваш город</label>
+                                        <select id="ru-city" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                            <option value="Баку">Баку</option>
+                                            <option value="Гянджа">Гянджа</option>
+                                            <option value="Другой город">Другой город</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Интересующее направление</label>
+                                        <select id="ru-topic" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                            <option value="Вводная лекция и курс ТМ">Курс ТМ / Вводная лекция</option>
+                                            <option value="Консультация Джйотиш">Консультация Джйотиш</option>
+                                            <option value="Асаны Махариши">Асаны Махариши</option>
+                                            <option value="Проверка практики (чекинг)">Проверка практики (чекинг)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Ваш вопрос или комментарий (необязательно)</label>
+                                    <textarea id="ru-msg" rows="2" placeholder="Напишите удобные дни или ваш вопрос..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500"></textarea>
+                                </div>
+                                <button onclick="sendWhatsApp('ru')" class="w-full py-4 rounded-xl bg-amber-600 text-white text-center font-bold hover:bg-amber-500 transition shadow-lg mt-2">
+                                    Отправить заявку в WhatsApp
+                                </button>
+                                <p class="text-xs text-slate-400 text-center pt-1">Откроется диалог в WhatsApp с учителем (+994 50 533 16 29)</p>
                             </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Номер телефона</label>
-                                <input type="text" placeholder="+994 ..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
-                            </div>
-                            <a href="https://wa.me/994505331629" target="_blank" class="w-full block py-4 rounded-xl bg-amber-600 text-white text-center font-semibold hover:bg-amber-700 transition shadow-lg">
-                                Написать в WhatsApp
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -281,86 +858,136 @@
         </section>
 
         <!-- ФУТЕР (RU) -->
-        <footer class="py-8 bg-slate-950 text-slate-500 text-center text-sm border-t border-slate-800">
-            <p>© 2026 Степан Годына. Все права защищены. Трансцендентальная Медитация в Азербайджане.</p>
+        <footer class="py-10 bg-slate-950 text-slate-400 text-center text-sm border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 space-y-2">
+                <p class="font-serif text-white text-base">Годына Степан Николаевич — Сертифицированный учитель Трансцендентальной Медитации в Азербайджане</p>
+                <p class="text-xs text-slate-500">© 2026 Все права защищены. Официальные курсы ТМ, Асаны Махариши и консультации Джйотиш в Баку и Гяндже.</p>
+            </div>
         </footer>
     </div>
 
 
-    <!-- ========================================== -->
-    <!-- ПОЛНАЯ АЗЕРБАЙДЖАНСКАЯ ВЕРСИЯ              -->
-    <!-- ========================================== -->
+    <!-- ================================================================= -->
+    <!-- ПОЛНАЯ РАЗВЁРНУТАЯ АЗЕРБАЙДЖАНСКАЯ ВЕРСИЯ (ВСЕ 14 БЛОКОВ)         -->
+    <!-- ================================================================= -->
     <div id="page-az" class="hidden">
-        <!-- ШАПКА САЙТА (AZ) -->
-        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+
+        <!-- 1. ШАПКА САЙТА (AZ) -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-white font-serif font-bold text-lg shadow-md">
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-white font-serif font-bold text-lg shadow-md shrink-0">
                         СГ
                     </div>
                     <div>
                         <span class="block font-serif font-bold text-lg text-slate-900 leading-tight">Stepan Qodına</span>
                         <span class="block text-xs font-medium text-amber-700 tracking-wider uppercase">Azərbaycanda TM Müəllimi</span>
                     </div>
-                </div>
+                </a>
 
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <!-- Десктопное меню (AZ) -->
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium text-slate-600">
                     <a href="#about-az" class="hover:text-amber-700 transition">TM Haqqında</a>
+                    <a href="#benefits-az" class="hover:text-amber-700 transition">Nəticələr</a>
                     <a href="#science-az" class="hover:text-amber-700 transition">Elm</a>
+                    <a href="#teacher-az" class="hover:text-amber-700 transition">Müəllim</a>
                     <a href="#jyotish-az" class="hover:text-amber-700 transition">Cyotish və Asanalar</a>
-                    <a href="#schedule-az" class="hover:text-amber-700 transition">Kurslar</a>
-                    <a href="#contact-az" class="hover:text-amber-700 transition">Əlaqə</a>
+                    <a href="#steps-az" class="hover:text-amber-700 transition">7 Addım</a>
+                    <a href="#venues-az" class="hover:text-amber-700 transition">Bakı və Gəncə</a>
+                    <a href="#reviews-az" class="hover:text-amber-700 transition">Rəylər</a>
+                    <a href="#faq-az" class="hover:text-amber-700 transition">Suallar</a>
                 </nav>
 
                 <div class="flex items-center space-x-3">
-                    <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+                    <!-- Переключатель языков -->
                     <div class="inline-flex rounded-full bg-slate-100 p-1 border border-slate-200">
-                        <button onclick="switchLang('ru')" class="px-3 py-1 rounded-full text-slate-600 hover:text-slate-900 text-xs font-bold transition">
+                        <button onclick="switchLang('ru')" class="px-3.5 py-1 rounded-full text-slate-600 hover:text-slate-900 text-xs font-bold transition">
                             RU
                         </button>
-                        <button onclick="switchLang('az')" class="px-3 py-1 rounded-full bg-amber-600 text-white text-xs font-bold shadow-sm transition">
+                        <button onclick="switchLang('az')" class="px-3.5 py-1 rounded-full bg-amber-600 text-white text-xs font-bold shadow-sm transition">
                             AZ
                         </button>
                     </div>
+
                     <a href="#contact-az" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-amber-700 transition shadow-sm">
                         Qeydiyyat
                     </a>
+
+                    <!-- Кнопка мобильного меню (AZ) -->
+                    <button onclick="toggleMobileMenu('az')" class="xl:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Menyu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
+            </div>
+
+            <!-- Выпадающее мобильное меню (AZ) -->
+            <div id="mobile-menu-az" class="hidden xl:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2 shadow-lg">
+                <a href="#about-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">TM Haqqında</a>
+                <a href="#benefits-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Təcrübənin nəticələri</a>
+                <a href="#science-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Elmi tədqiqatlar</a>
+                <a href="#teacher-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Müəllim haqqında</a>
+                <a href="#jyotish-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Cyotish və Maharişi Asanaları</a>
+                <a href="#steps-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">7 təlim addımı</a>
+                <a href="#venues-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Bakı və Gəncədə təlim</a>
+                <a href="#reviews-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Tələbələrin rəyləri</a>
+                <a href="#faq-az" onclick="toggleMobileMenu('az')" class="block py-2 text-sm font-medium text-slate-700 hover:text-amber-600">Tez-tez verilən suallar</a>
+                <a href="#contact-az" onclick="toggleMobileMenu('az')" class="block w-full text-center mt-3 py-3 rounded-full bg-amber-600 text-white text-sm font-bold">Mühazirəyə yazılmaq</a>
             </div>
         </header>
 
-        <!-- ГЛАВНЫЙ ЭКРАН (AZ) -->
-        <section class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-amber-50/50 via-white to-slate-50">
+        <!-- 2. ГЛАВНЫЙ ЭКРАН (AZ) -->
+        <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-amber-50/70 via-white to-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                        <div class="inline-flex items-center space-x-2 bg-amber-100/80 text-amber-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
                             <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
                             <span>Bakı və Gəncədə Rəsmi Təlim</span>
                         </div>
                         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                            Transsendental Meditasiya
+                            Azərbaycanda Transsendental Meditasiya
                         </h1>
-                        <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                            Dərin stresdən azad olmaq, enerjini bərpa etmək və zehnin tam potensialını üzə çıxarmaq üçün sadə, təbii və elmi cəhətdən təsdiqlənmiş üsul.
+                        <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Sinir sisteminin dərin istirahəti, stresdən tam azad olmaq, sağlamlığı möhkəmləndirmək və şüurun yaradıcı potensialını üzə çıxarmaq üçün sadə, təbii və elmi cəhətdən təsdiqlənmiş zehni texnika.
                         </p>
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto lg:mx-0 pt-2">
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">20 dəq</span>
+                                <span class="text-xs text-slate-500">gündə iki dəfə</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">600+</span>
+                                <span class="text-xs text-slate-500">elmi tədqiqat</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">250+</span>
+                                <span class="text-xs text-slate-500">universitet</span>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                                <span class="block font-serif font-bold text-2xl text-amber-600">10 mln+</span>
+                                <span class="text-xs text-slate-500">öyrənənlər</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-3">
                             <a href="#contact-az" class="w-full sm:w-auto px-8 py-4 rounded-full bg-amber-600 text-white font-semibold hover:bg-amber-700 transition shadow-lg shadow-amber-600/20 text-center">
                                 Tanışlıq mühazirəsinə yazılmaq
                             </a>
-                            <a href="#about-az" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition text-center">
-                                Metod haqqında ətraflı
+                            <a href="#steps-az" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition text-center">
+                                Kurs necə keçirilir (7 addım)
                             </a>
                         </div>
                     </div>
 
                     <div class="lg:col-span-5 flex justify-center">
-                        <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
-                            <img src="stepan.png" alt="Stepan Qodına" class="w-full h-full object-cover object-top" onerror="this.src='stepan1.png';">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex items-end p-6">
+                        <div class="relative w-72 h-96 sm:w-80 sm:h-[460px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
+                            <img src="stepan.png" alt="Qodına Stepan Nikolayeviç" class="w-full h-full object-cover object-top" onerror="this.src='stepan1.png';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/15 to-transparent flex items-end p-6">
                                 <div class="text-white">
-                                    <p class="font-serif font-bold text-xl">Stepan Qodına</p>
-                                    <p class="text-xs text-amber-200 uppercase tracking-widest font-semibold">Sertifikatlı TM Müəllimi</p>
+                                    <p class="font-serif font-bold text-xl">Qodına Stepan Nikolayeviç</p>
+                                    <p class="text-xs text-amber-300 uppercase tracking-widest font-semibold mt-0.5">Sertifikatlı TM Müəllimi</p>
+                                    <p class="text-xs text-slate-300 mt-1">Bakı • Gəncə, Azərbaycan</p>
                                 </div>
                             </div>
                         </div>
@@ -369,185 +996,713 @@
             </div>
         </section>
 
-        <!-- TM HAQQINDA (AZ) -->
+        <!-- 3. ЦИТАТА МАХАРИШИ МАХЕШ ЙОГИ (AZ) -->
+        <section class="py-12 bg-slate-900 text-white border-y border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="font-serif italic text-xl sm:text-2xl text-amber-100 leading-relaxed">
+                    «Ağacın bütün budaqlarının, yarpaqlarının və meyvələrinin yaşıllaşması üçün onun kökünü sulamaq lazım olduğu kimi, Transsendental Meditasiya vasitəsilə də insan öz həyatının kökünə — Saf Şüura müraciət edir və varlığının bütün sahələrini eyni vaxtda zənginləşdirir».
+                </p>
+                <p class="mt-4 text-xs uppercase tracking-widest text-amber-400 font-bold">
+                    — Maharişi Maheş Yoqi, Transsendental Meditasiya proqramının banisi
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. TM HAQQINDA, NƏ OLMADIĞI VƏ OKEAN METAFORASI (AZ) -->
         <section id="about-az" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Müasir dünyada qədim ənənə</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Qədim Vedik Şüur Elmi</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Transsendental Meditasiya nədir?</h2>
                     <p class="text-slate-600 text-lg leading-relaxed">
-                        TM gündə iki dəfə 20 dəqiqə ərzində, gözlər bağlı halda rahat oturaraq tətbiq edilir. Bu, din, fəlsəfə və ya həyat tərzinin dəyişdirilməsi deyil — Maharişi Maheş Yoqi tərəfindən bərpa edilmiş təbii zehni texnikadır.
+                        Transsendental Meditasiya (TM) — gündə iki dəfə (səhər və axşam) 20 dəqiqə ərzində, gözlər bağlı halda kresloda rahat oturaraq tətbiq edilən sadə, təbii və heç bir səy tələb etməyən texnikadır.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- 3 əsas prinsip -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                     <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">01</div>
-                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Səysiz və konsentrasiyasız</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Digər təcrübələrdən fərqli olaraq, TM düşüncələrə nəzarət və ya diqqəti cəmləməyi tələb etmir. Zehin təbii şəkildə sakitləşir və daxili sükut vəziyyətinə gəlir.</p>
+                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Tamamilə səysiz</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Konsentrasiya, vizualizasiya və ya nəfəsə nəzarət təcrübələrindən fərqli olaraq, TM-də düşüncələrlə mübarizə aparmaq və ya «zehni boşaltmağa» çalışmaq lazım deyil. Proses zehnin daha böyük sakitlik, enerji və məmnuniyyət sahəsinə olan təbii meylinə əsaslanır.
+                        </p>
                     </div>
                     <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">02</div>
-                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Yuxudan daha dərin istirahət</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Təcrübə zamanı bədən dərin sakitlik vəziyyəti alır, bunun sayəsində sinir sisteminin ən dərin stresləri və yorğunluğu aradan qalxır.</p>
+                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Saf Şüur təcrübəsi</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            «Transsendensiya» — «hüdudları aşmaq» deməkdir. Təcrübə zamanı aktiv zehin spontan olaraq sakitləşir, düşüncənin daha incə səviyyələrindən keçir və düşüncənin hüdudlarını aşaraq Saf Şüur, hüdudsuz sülh və yaradıcı zəka vəziyyətinə çıxır.
+                        </p>
                     </div>
                     <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">03</div>
-                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Aydınlıq və yaradıcılıq</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Müntəzəm təcrübə beynin gizli ehtiyatlarını oyadır, diqqəti, emosional sabitliyi, yaradıcı düşüncəni və həyat sevincini artırır.</p>
+                        <h3 class="font-serif font-bold text-xl text-slate-900 mb-3">Bədən üçün ən dərin istirahət</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Oyaq sakitlik vəziyyətində oksigen istehlakı və stres hormonlarının səviyyəsi sürətlə azalır. Orqanizm adi gecə yuxusu zamanı getməyən ən dərin xroniki gərginlikləri belə təbii şəkildə əritmək üçün unikal imkan qazanır.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TM nə DEYİL -->
+                <div class="bg-amber-50/70 rounded-3xl p-8 sm:p-10 border border-amber-200/80 mb-16">
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6 text-center">Bilmək vacibdir: Transsendental Meditasiya nə DEYİL</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Din deyil</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">TM inanc tələb etmir və heç bir dini və ya dünyəvi baxışla ziddiyyət təşkil etmir.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Fəlsəfə deyil</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">Bu, nəticəsi birbaşa təcrübədə hiss olunan sırf praktiki psixofizioloji texnikadır.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Həyat tərzinin dəyişməsi deyil</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">Sizdən qidalanma rasionunu, gün rejimini, geyimi və ya ünsiyyət dairəsini dəyişmək tələb olunmur.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-amber-100 shadow-sm">
+                            <span class="text-amber-600 font-bold text-sm block mb-1">✕ Konsentrasiya deyil</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">Heç bir göz gərginliyi, obrazların saxlanması və ya düşüncələrə nəzarət yoxdur — texnikanı hətta uşaq da asanlıqla öyrənir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Okean metaforası -->
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl mb-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 space-y-4">
+                            <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Transsendensiya mexanikası</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold">Okeanın səthindəki dalğalar kimi</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Dərin okeanı təsəvvür edin: onun səthində aktiv düşüncələrin, emosiyaların, planların və narahatlıqların dalğaları daim hərəkət edir. Dalğaları əllə güclə saxlamağa çalışsanız (düşüncələri boğmaq cəhdi kimi), səthdəki dalğalanma yalnız artacaq. Lakin dərinlikdə okean həmişə tamamilə səssiz və hərəkətsiz qalır. Transsendental Meditasiya zehnin narahat səthdən öz şüurunun sakit dərinliyinə təbii şəkildə enməsinə və həyata güclə dolu qayıtmasına imkan verir.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                            <a href="#contact-az" class="px-7 py-4 rounded-full bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition text-center shadow-lg">
+                                Tanışlıq mühazirəsində iştirak et
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. MÜQAYİSƏLİ CƏDVƏL: 3 MEDİTASİYA KATEQORİYASI (AZ) -->
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">Elmi təsnifat: 3 meditasiya kateqoriyası</h3>
+                        <p class="text-slate-600 text-sm mt-2">Neyrofizioloqlar diqqətin işindən və baş beynin dalğalarından (EEQ) asılı olaraq üç tamamilə fərqli təcrübə növünü ayırırlar:</p>
+                    </div>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                        <table class="w-full text-left border-collapse bg-white text-sm">
+                            <thead>
+                                <tr class="bg-slate-900 text-white">
+                                    <th class="p-4 sm:p-5 font-serif text-base">Təcrübə növü</th>
+                                    <th class="p-4 sm:p-5 font-serif text-base">Zehnin iş mexanizmi</th>
+                                    <th class="p-4 sm:p-5 font-serif text-base">Səy və beynin EEQ mənzərəsi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200">
+                                <tr>
+                                    <td class="p-4 sm:p-5 font-bold text-slate-800">1. Fokuslanmış diqqət (Konsentrasiya)</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Diqqətin nəfəsdə, nöqtədə, şam alovunda saxlanması və ya düşüncələrin məcburi dayandırılması.</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Yüksək səy. Gərgin zehni işdə olduğu kimi sürətli beta və qamma dalğaları (20–50 Hs).</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 sm:p-5 font-bold text-slate-800">2. Açıq müşahidə (Müşahidə / Mindfulness)</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Cari düşüncələrin, emosiyaların və hisslərin onlara qoşulmadan kənardan izlənməsi.</td>
+                                    <td class="p-4 sm:p-5 text-slate-600">Orta səy. Lokal teta dalğaları (4–8 Hs), diqqət düşüncə axınına bağlı qalır.</td>
+                                </tr>
+                                <tr class="bg-amber-50/90">
+                                    <td class="p-4 sm:p-5 font-bold text-amber-900">3. Avtomatik özünü-transsendensiya (TM)</td>
+                                    <td class="p-4 sm:p-5 text-amber-950 font-medium">Düşüncə prosesinin hüdudlarından təbii şəkildə çıxaraq səssiz Saf Şüur vəziyyətinə keçid.</td>
+                                    <td class="p-4 sm:p-5 text-amber-950 font-medium">Sıfır səy. Baş beyin qabığı boyunca sinxron koherent alfa-1 dalğaları (8–10 Hs).</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ELMİ TƏDQİQATLAR (AZ) -->
-        <section id="science-az" class="py-20 bg-slate-50 border-y border-slate-100">
+        <!-- 6. HƏYATIN 4 SAHƏSİNDƏ NƏTİCƏLƏR (AZ) -->
+        <section id="benefits-az" class="py-20 bg-slate-50 border-t border-slate-200/70">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Elmi sübutlar</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Dünya elmi tərəfindən təsdiqlənib</h2>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Kompleks effekt</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Müntəzəm TM təcrübəsi nə verir?</h2>
                     <p class="text-slate-600 text-lg">
-                        Dünyanın 250 müstəqil universitet və tədqiqat mərkəzində (Harvard, Stenford və ABŞ Milli Sağlamlıq İnstitutu daxil olmaqla) aparılmış 600-dən çox elmi araşdırma TM-in effektivliyini sübut etmişdir.
+                        Gündə iki dəfə 20 dəqiqə daxili sakitliyə dərin qərq olma beynin işini, fiziologiyanı, emosional fonu və işgüzar fəallığı kökündən yaxşılaşdırır.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">-48%</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Ürək sağlamlığı</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Ürək-damar problemləri riskinin azalması və qan təzyiqinin normallaşması.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">-50%</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Narahatlığın azalması</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Təcrübənin ilk həftələrindən stres hormonunun (kortizol) səviyyəsinin əhəmiyyətli dərəcədə aşağı düşməsi.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">EEQ</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Beyin koherensiyası</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Beynin sağ və sol yarımkürələrinin sinxron işləməsi, sakit oyaqlıq alfa-dalğalarının artması.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                        <div class="text-3xl font-serif font-bold text-amber-600 mb-2">+100%</div>
-                        <h4 class="font-bold text-slate-900 mb-2">Dərin yuxu</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Tez yuxuya getmə, yuxusuzluqdan azad olma və gecə ərzində enerjinin tam bərpası.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- CYOTİSH VƏ ASANALAR (AZ) -->
-        <section id="jyotish-az" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Bütöv Vedik yanaşma</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Cyotish və Maharişi Asanaları</h2>
-                    <p class="text-slate-600 text-lg">
-                        Maharişi Vedik Elminin klassik istiqamətləri vasitəsilə şüurun və bədənin harmonik inkişafı.
-                    </p>
-                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="p-8 rounded-2xl bg-amber-50/60 border border-amber-100">
-                        <span class="inline-block px-3 py-1 rounded-full bg-amber-200/70 text-amber-900 text-xs font-bold uppercase mb-4">Fiziologiya və tənəffüs</span>
-                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Maharişi Asanaları və Pranayama</h3>
-                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
-                            Yumşaq vedik hərəkətlər kompleksi (Maharişi Asanaları) və tənəffüs texnikası (Pranayama) meditasiyaya ideal hazırlıq rolunu oynayır.
-                        </p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Əzələ və fiziki gərginliyi aradan qaldırır</li>
-                            <li>• TM təcrübəsindən əvvəl zehni və bədəni tarazlığa gətirir</li>
-                            <li>• Hər yaş və fiziki hazırlıq səviyyəsi üçün uyğundur</li>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Sahə 01 • Zehin və karyera</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Düşüncə aydınlığı, yaddaş və məhsuldarlıq</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Diqqət itiliyi:</strong> informasiya səs-küyünə yayınmadan əsas məsələyə asanlıqla fokuslanmaq qabiliyyəti.</li>
+                            <li><strong class="text-slate-800">✓ Yaradıcı intellekt:</strong> biznesdə və peşəkar fəaliyyətdə qeyri-standart, dəqiq həllərin spontan tapılması.</li>
+                            <li><strong class="text-slate-800">✓ Yaddaşın güclənməsi:</strong> tələbələrdə, mütəxəssislərdə və rəhbərlərdə yeni məlumatların mənimsənilmə sürətinin artması.</li>
+                            <li><strong class="text-slate-800">✓ Tələskənlik olmadan effektivlik:</strong> axşama qədər zehin təravətini qoruyaraq daha çox işin yerinə yetirilməsi.</li>
                         </ul>
                     </div>
-                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="inline-block px-3 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold uppercase mb-4">Vedik astrologiya</span>
-                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Cyotish — zaman dövrlərinin biliyi</h3>
-                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
-                            Maharişi Paraşaranın klassik sistemi («Brihat Paraşara Hora Şastra») əsasında məsləhətlər: Raşi natal xəritəsinin, Navamşa (D9) xəritəsinin, Nakşatraların və Daşa dövrlərinin dərin təhlili.
-                        </p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Şəxsiyyətin güclü tərəflərinin və həyat missiyasının dərk edilməsi</li>
-                            <li>• Mühüm başlanğıcların və dövrlərin əlverişli planlaşdırılması</li>
-                            <li>• Şüurun inkişafı vasitəsilə həyat sahələrinin harmonizasiyası</li>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Sahə 02 • Bədən və sağlamlıq</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Sağlam ürək, dərin yuxu və immunitet</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Ürək və damarların qorunması:</strong> qan təzyiqinin təbii normallaşması və hipertoniya riskinin azalması.</li>
+                            <li><strong class="text-slate-800">✓ Yuxusuzluqdan azad olma:</strong> tez yuxuya getmə və həqiqətən bərpaedici dərin gecə yuxusu.</li>
+                            <li><strong class="text-slate-800">✓ Psixosomatikanın aradan qalxması:</strong> gərginlik baş ağrılarının, əzələ spazmlarının və xroniki yorğunluğun azalması.</li>
+                            <li><strong class="text-slate-800">✓ Orqanizmin cavanlaşması:</strong> hüceyrələrin bioloji qocalmasının ləngiməsi və immun sisteminin möhkəmlənməsi.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Sahə 03 • Emosiyalar və antistres</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Daxili təmkin və həyat sevinci</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Fon narahatlığının çəkilməsi:</strong> təşvişin, qorxuların, panik vəziyyətlərin və emosional tükənmənin əriməsi.</li>
+                            <li><strong class="text-slate-800">✓ Emosional sabitlik:</strong> xarici streslər və böhranlar sizi daxili tarazlıqdan çıxara bilmir.</li>
+                            <li><strong class="text-slate-800">✓ Zərərli vərdişlərdən azad olma:</strong> siqaretə, alkoqola və stimulyatorlara olan meylin təbii azalması.</li>
+                            <li><strong class="text-slate-800">✓ Daxili sevinc axını:</strong> sakit inamın, nikbinliyin və həyatı tam qavramağın oyanması.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Sahə 04 • Münasibətlər və mühit</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-4">Ailədə və kollektivdə harmoniya</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">✓ Səmimiyyət və səbir:</strong> daxili yorğunluq getdikdə yaxın insanlara qarşı əsəbilik halları yox olur.</li>
+                            <li><strong class="text-slate-800">✓ Dialoq sənəti:</strong> həmsöhbəti eşitmək və münaqişəsiz qarşılıqlı faydalı həllər tapmaq bacarığı.</li>
+                            <li><strong class="text-slate-800">✓ Lider sakitliyi:</strong> TM tətbiq edən rəhbər bütün komandaya inam və həmrəylik ötürür.</li>
+                            <li><strong class="text-slate-800">✓ Cəmiyyətə töhfə:</strong> meditasiya edən hər bir insan ətrafında sülh və razılıq atmosferi yayır.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TƏLİM NECƏ KEÇİRİLİR (AZ) -->
-        <section id="schedule-az" class="py-20 bg-slate-50 border-t border-slate-100">
+        <!-- 7. ELMİ TƏDQİQATLAR (600+ İŞ) (AZ) -->
+        <section id="science-az" class="py-20 bg-white border-t border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Kursun strukturu</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Bakı və Gəncədə təlim necə keçirilir</h2>
-                    <p class="text-slate-600 text-lg">
-                        Təlim sertifikatlı müəllim tərəfindən ardıcıl 4 gün ərzində fərdi və qrup şəklində keçirilir (Bakıda, o cümlədən Crown Wellness Club məkanında və Gəncədə).
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Dünya sübutlu tibbi</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">250 universitetdə 600-dən çox elmi tədqiqat</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        TM elm tarixində ən çox öyrənilmiş meditasiya texnikasıdır. Tədqiqatlar Harvard Tibb Məktəbində, Stenfordda, Yeldə, Kaliforniya Universitetində (UCLA) və ABŞ Milli Sağlamlıq İnstitutunda (NIH) aparılmış və aparıcı elmi jurnallarda (<em>Lancet, JAMA, Stroke, Hypertension</em>) dərc edilmişdir.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Addım 1</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Tanışlıq mühazirəsi</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">TM metodu, elmi araşdırmalar və təcrübənin imkanları ilə tanışlıq. Öncədən qeydiyyatla iştirak ödənişsizdir.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-48%</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">İnfarkt və insult riskinin azalması</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">ABŞ Milli Sağlamlıq İnstitutunun (NIH) çoxillik tədqiqatı və Amerika Kardiologiya Assosiasiyasının (AHA) rəyi ölüm hallarının, infarkt və insultların 48% azaldığını təsdiqləmişdir.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Addım 2</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Hazırlıq və müsahibə</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">TM texnikasının mexanikası və kursa başlamazdan əvvəl müəllimlə qısa fərdi söhbət.</p>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-30..50%</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Stres hormonu kortizolun enməsi</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Biokimyəvi analiz 20 dəqiqəlik TM təcrübəsi zamanı kortizol və plazma laktatının səviyyəsinin kəskin düşdüyünü göstərir, halbuki gözlər bağlı adi istirahətdə bu göstərici demək olar ki, dəyişmir.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Addım 3</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Fərdi təlim</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Sertifikatlı müəllimlə təkbətək meditasiya texnikasının fərdi ötürülməsi.</p>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">EEQ α1</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Beynin qlobal koherensiyası</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Elektroensefaloqramma sağ və sol yarımkürələrin, eləcə də alın paylarının alfa-1 (8–10 Hs) diapazonunda nizamlı, sinxron işini qeydə alır ki, bu da yüksək IQ və kreativliklə bağlıdır.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <span class="text-xs font-bold text-amber-600 uppercase">Addım 4</span>
-                        <h4 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Təcrübənin yoxlanılması</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">Təcrübənin düzgünlüyünü yoxlamaq, sualları cavablandırmaq və sabit təcrübəni möhkəmləndirmək üçün üç qrup məşğələsi.</p>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-12 il</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Bioloji yaşın cavanlaşması</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Tədqiqatlara görə (<em>International Journal of Neuroscience</em>), 5 ildən çox TM tətbiq edən insanların bioloji yaşı (təzyiq, görmə, eşitmə, damar tonusu) xronoloji yaşlarından orta hesabla 12 il cavandır.</p>
+                    </div>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">2 dəfə</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Narahatlıq və tükənmənin azalması</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Stenford Universitetində 146 müstəqil elmi işin meta-analizi göstərmişdir ki, TM xroniki narahatlığı digər relaksasiya metodları ilə müqayisədə iki dəfə daha effektiv aradan qaldırır.</p>
+                    </div>
+                    <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200/70 shadow-sm">
+                        <div class="text-4xl font-serif font-bold text-amber-600 mb-3">-42%</div>
+                        <h4 class="font-bold text-slate-900 text-lg mb-2">Yuxusuzluqdan sürətli xilas</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Araşdırmalar müntəzəm təcrübənin ilk ayındaca yuxuya getmə vaxtının iki dəfədən çox qısaldığını və gecə yuxusu fazalarının dərindən normallaşdığını göstərir.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ƏLAQƏ (AZ) -->
+        <!-- 8. MÜƏLLİM VƏ MAHARİŞİ ƏNƏNƏSİ HAQQINDA (AZ) -->
+        <section id="teacher-az" class="py-20 bg-amber-50/50 border-y border-amber-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100">
+                            <img src="stepan1.png" alt="Qodına Stepan Nikolayeviç" class="w-full h-80 sm:h-96 object-cover object-top rounded-2xl mb-6" onerror="this.src='stepan.png';">
+                            <div class="space-y-1.5 text-center">
+                                <h3 class="font-serif font-bold text-2xl text-slate-900">Qodına Stepan Nikolayeviç</h3>
+                                <p class="text-xs font-bold uppercase tracking-widest text-amber-700">Azərbaycanda Sertifikatlı TM Müəllimi</p>
+                                <p class="text-xs text-slate-500 pt-1">Bakı və Gəncədə rəsmi kurslar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Biliyin orijinal ötürülməsi</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                            Maharişi ənənəsinə uyğun olaraq sertifikatlı müəllimlə təkbətək təlim
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            Transsendental Meditasiya böyük vedik alim və müəllim <strong>Maharişi Maheş Yoqi</strong> tərəfindən bərpa edilərək dünyaya açıqlanmışdır. Hər bir insanın zehin sükutu təcrübəsini təhrifsiz və gərginliksiz alması üçün TM texnikası heç vaxt kitab və ya video vasitəsilə kütləvi ötürülmür — təlim həmişə sertifikatlı müəllimlə fərdi keçirilir.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Mən Gəncədə anadan olmuşam və <strong>Bakıda</strong> (o cümlədən <em>Crown Wellness Club</em> bazasında) və <strong>Gəncədə</strong> rəsmi tanışlıq mühazirələri, 4 günlük baza TM təlim kursları, qrup məşğələləri və təqdimatlar keçirirəm. Məqsədim təcrübəni sizə ilkin saflığında və sadəliyində ötürməkdir ki, o, hər gün sizə sevinc və real fayda gətirsin.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Transsendental Meditasiyanın tədrisi ilə yanaşı, mən meditasiyaya qayğıkeş fiziki hazırlıq kimi <strong>Maharişi Asanaları</strong> kompleksini öyrədir və Maharişi Paraşaranın klassik prinsipləri əsasında vedik astrologiya — <strong>Cyotish</strong> üzrə dərin fərdi məsləhətlər keçirirəm.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                <span class="font-bold text-slate-900 block mb-1">✓ Fərdi ötürülmə</span>
+                                <span class="text-xs text-slate-600">Fərdi mantra seçimi və bütün 7 təlim addımı boyunca diqqətli müşayiət.</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                <span class="font-bold text-slate-900 block mb-1">✓ Ömürboyu dəstək</span>
+                                <span class="text-xs text-slate-600">Təcrübənin düzgünlüyünün ödənişsiz yoxlanılması («çekinq») və məzun görüşləri.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CYOTİSH VƏ MAHARİŞİ ASANALARI (AZ) -->
+        <section id="jyotish-az" class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Bütöv Vedik yanaşma</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">Cyotish və Maharişi Asanaları</h2>
+                    <p class="text-slate-300 text-lg">
+                        Üç vedik istiqamətin — Transsendental Meditasiya, Maharişi Asanaları və Cyotish astrologiyasının harmonik birləşməsi şüurun inkişafı, bədən sağlamlığı və həyatın müdrik planlaşdırılması üçün bütöv alət verir.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Maharişi Asanaları -->
+                    <div class="p-8 sm:p-10 rounded-3xl bg-slate-800/90 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase mb-4">Meditasiyaya fiziki hazırlıq</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">Maharişi Asanaları və Pranayama</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Bilavasitə 20 dəqiqəlik Transsendental Meditasiyadan əvvəl yerinə yetirilən, Maharişi tərəfindən xüsusi qurulmuş yumşaq, rahat yoqa pozaları (Asanalar) və sakit vedik tənəffüs (Pranayama) ardıcıllığı.
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Güc yüklənməsi olmadan gün ərzində onurğada, boyunda və oynaqlarda yığılmış əzələ tutulmalarını yumşaq şəkildə aradan qaldırır</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Tənəffüs axınlarını tarazlaşdırır və vegetativ sinir sistemini sakitləşdirir, TM-ə qərq olmanı daha da dərinləşdirir</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Hər yaşda və bədən quruluşunda əlçatan olan zehin və bədənin incə neyro-əzələ inteqrasiyasını yaradır</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#contact-az" class="inline-flex items-center text-sm font-semibold text-amber-400 hover:text-amber-300">
+                            Maharişi Asanaları məşğələsinə yazılmaq →
+                        </a>
+                    </div>
+
+                    <!-- Cyotish -->
+                    <div class="p-8 sm:p-10 rounded-3xl bg-slate-800/90 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase mb-4">Klassik Maharişi Paraşara məktəbi</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">Vedik astrologiya Cyotish</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Klassik ənənənin ilkin mənbəyinə — Maharişi Paraşaranın fundamental əsəri <em>«Brihat Paraşara Hora Şastra»</em>-ya əsaslanan fərdi doğum qoroskopunun dərin analitik təhlili.
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span><strong>Raşi (D1)</strong> xəritəsinin, planetlərin (Qrahaların) 12 evdə (Bhavalarda) yerləşməsinin və <strong>Navamşa (D9)</strong> kəsir xəritəsinin kompleks təhlili</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Ay bürclərinin (<strong>27 Nakşatra</strong>) detallı araşdırılması və <strong>Vimşottari Daşa</strong> planet dövrlərinin və alt-dövrlərinin hesablanması</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold">✦</span>
+                                    <span>Həyat təyinatının, karyeranın, maliyyənin, uyğunluğun və mühüm qərarlar üçün əlverişli dövrlərin aydın anlaşılması</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#contact-az" class="inline-flex items-center text-sm font-semibold text-amber-400 hover:text-amber-300">
+                            Natal xəritənin fərdi təhlilini sifariş etmək →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. 7 ADDIM TƏLİM VƏ ÖMÜRBOYU DƏSTƏK (AZ) -->
+        <section id="steps-az" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Beynəlxalq kurs standartı</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Təlim proqramı: 7 ardıcıl addım</h2>
+                    <p class="text-slate-600 text-lg">
+                        Kursun strukturu ən xırda detallarına qədər düşünülmüşdür: ilkin tanışlıqdan sonra hər biri 1,5 saat olan 4 ardıcıl gün gəlir və bu müddətdə siz TM texnikasını ömür boyu tam mənimsəyirsiniz.
+                    </p>
+                </div>
+
+                <!-- Addım 1-3 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-7 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase mb-3">Addım 1 • Ödənişsiz</span>
+                        <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Tanışlıq mühazirəsi (60 dəq)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Müəllimlə tanışlıq, Transsendental Meditasiyanın sağlamlıq, stresdən azad olma və beyin potensialının inkişafı üçün nə verdiyinin icmalı, eləcə də suallarınıza cavablar.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase mb-3">Addım 2 • Hazırlıq</span>
+                        <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Hazırlıq mühazirəsi (45 dəq)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">TM mexanikasının praktiki izahı: bu texnika niyə səysiz işləyir, digər meditasiya növlərindən nə ilə fərqlənir və müəllimlər ənənəsi haradan qaynaqlanır.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase mb-3">Addım 3 • Fərdi</span>
+                        <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Fərdi müsahibə (10–15 dəq)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Hazırlıq mühazirəsindən dərhal sonra şəxsi tanışlıq və təliminiz üçün uyğun vaxtın seçilməsi məqsədilə müəllimlə qısa fərdi söhbət.</p>
+                    </div>
+                </div>
+
+                <!-- Addım 4-7 -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 border border-amber-200 shadow-md mb-8">
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6 text-center">Əsas praktiki kursun 4 ardıcıl günü (Addım 4–7)</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="p-6 rounded-2xl bg-amber-50/70 border border-amber-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Addım 4 • Gün 1</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Fərdi təlim</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">Müəllimlə təkbətək fərdi məşğələ (60–90 dəq): sizə şəxsi mantranız ötürülür və dərhal ilk dərin meditasiya təcrübəsini alırsınız.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Addım 5 • Gün 2</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Təcrübənin düzgünlüyü</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">İlk qrup yoxlaması: evdəki ilk müstəqil meditasiyanızın müzakirəsi və tamamilə səysiz meditasiya etmək barədə mühüm təlimatlar.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Addım 6 • Gün 3</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Stresin aradan qaldırılması</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">İkinci qrup görüşü: dərin fizioloji istirahətin yığılmış stresləri necə əritməsinin və sinir sisteminin işini necə normallaşdırmasının ətraflı izahı.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-bold text-amber-700 uppercase">Addım 7 • Gün 4</span>
+                            <h5 class="font-serif font-bold text-lg text-slate-900 mt-1 mb-2">Tam potensialın açılması</h5>
+                            <p class="text-xs text-slate-600 leading-relaxed">Kursun yekun görüşü: müntəzəm təcrübə zamanı yüksək şüur vəziyyətlərinin inkişaf icmalı və bütün praktiki suallara cavablar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ömürboyu dəstək -->
+                <div class="bg-amber-100/70 rounded-2xl p-6 sm:p-8 border border-amber-200 text-center max-w-4xl mx-auto">
+                    <h4 class="font-serif font-bold text-xl text-slate-900 mb-2">Kurs bitdikdən sonra ömürboyu dəstək proqramı</h4>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        4 günlük kursu keçdikdən sonra meditasiyanızın asan, təbii qaldığına və maksimum nəticə verdiyinə əmin olmaq üçün həmişə ödənişsiz fərdi və ya qrup yoxlaması («çekinq») üçün müəllimə müraciət edə bilərsiniz.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. BAKI VƏ GƏNCƏDƏ TƏLİM (MƏKANLAR) (AZ) -->
+        <section id="venues-az" class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Kursların keçirilmə coğrafiyası</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Bakı və Gəncədə təlim və mühazirələr</h2>
+                    <p class="text-slate-600 text-lg">
+                        Sizə uyğun şəhərdə tanışlıq mühazirəsinə, tam 4 günlük TM təlim kursuna və ya fərdi məsləhətə yazıla bilərsiniz.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-900 px-3.5 py-1 rounded-full text-xs font-bold uppercase mb-4">
+                            <span>📍 Bakı şəhəri</span>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Crown Wellness Club və Bakı zalları</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Bakıda <strong>Crown Wellness Club</strong>-un rahat məkanında müntəzəm olaraq Transsendental Meditasiya üzrə tanışlıq mühazirələri, açıq velnes-təqdimatlar (TM, Cyotish və Maharişi Asanalarını birləşdirən), 4 günlük qrup kursları və dəstəkləyici görüşlər keçirilir.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li>• Müntəzəm tanışlıq mühazirələri və açıq təqdimatlar</li>
+                            <li>• Fərdi təlim və 4 günlük qrup kursları</li>
+                            <li>• Maharişi Asanaları məşğələləri və qrup meditasiyaları</li>
+                        </ul>
+                        <a href="#contact-az" class="inline-block px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-amber-600 transition">
+                            Bakıda cədvəli öyrənmək
+                        </a>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-900 px-3.5 py-1 rounded-full text-xs font-bold uppercase mb-4">
+                            <span>📍 Gəncə şəhəri</span>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Gəncədə təlim və məsləhətlər</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Gəncədə müntəzəm tanışlıq görüşləri, fərdi və qrup şəklində Transsendental Meditasiya təlimi, məzunlar üçün təcrübənin yoxlanılması və vedik astrologiya Cyotish üzrə şəxsi məsləhətlər keçirilir.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li>• Öncədən qeydiyyatla tanışlıq mühazirələri</li>
+                            <li>• Tam 4 günlük TM təlim kursu</li>
+                            <li>• Fərdi məsləhətlər və Cyotish xəritələrinin təhlili</li>
+                        </ul>
+                        <a href="#contact-az" class="inline-block px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-amber-600 transition">
+                            Gəncədə görüşə yazılmaq
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. RƏYLƏR (6 RƏY) (AZ) -->
+        <section id="reviews-az" class="py-20 bg-slate-50 border-t border-slate-200/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Tətbiq edənlərin canlı təcrübəsi</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Bakı və Gəncədə təlim keçənlərin rəyləri</h2>
+                    <p class="text-slate-600 text-lg">
+                        Stepan Nikolayeviçin kurslarında Transsendental Meditasiyanı mənimsəmiş müxtəlif peşə və yaş sahiblərinin təəssüratları.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Stepan Nikolayeviçlə tanışlığa qədər elə düşünürdüm ki, meditasiya özünü güclə heç nə düşünməməyə məcbur etməkdir. Bakıdakı kursda ilk gündən ən dərin istirahəti hiss etdim. Daimi tələskənlik getdi, yuxum düzəldi, biznes və ailə üçün çoxlu güc yarandı».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Rüstəm Ə.</p>
+                            <p class="text-xs text-amber-700">Sahibkar, Bakı ş.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «TM kursuna və Maharişi Asanaları kompleksi ilə tanışlığa görə dərin təşəkkür edirəm. Səhər və axşam 20 dəqiqəlik təcrübə günümün ən sevimli hissəsinə çevrildi. Klinikadakı ən gərgin növbələrdən sonra belə sürətlə daxili sakitlik və yüngüllük vəziyyətinə qayıdıram».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Leyla M.</p>
+                            <p class="text-xs text-amber-700">Həkim, Bakı ş.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Gəncədə TM təlimi keçdim və Cyotish natal xəritəsinin təhlilini sifariş etdim. Çox dərin, dəqiq və qayğıkeş izahat. Stresdən yaranan təzyiq oynamaları dayandı, zehnim aydındır, bir çox həyat vəzifələrinə baxışım açıldı».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Elçin Q.</p>
+                            <p class="text-xs text-amber-700">Mühəndis, Gəncə ş.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Mən İT sahəsində işləyirəm və axşama doğru onlarla tapşırıqdan başım ağrıyırdı. Stepan Nikolayeviçin 4 günlük TM kursundan sonra tükənmə hissi tamamilə çəkildi. Axşam meditasiyası yorğunluğu elə götürür ki, sanki səhər yenidən oyanmışam».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Timur K.</p>
+                            <p class="text-xs text-amber-700">İT mütəxəssisi, Bakı ş.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Uzun illər səthi, narahat yuxudan əziyyət çəkirdim. Gəncədə təlimin artıq üçüncü günündə hiss etdim ki, sakit yuxuya gedirəm və zəngli saatdan əvvəl enerji ilə dolu oyanıram. Müəllimə həssaslığına və dəstəyinə görə çox minnətdaram».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Sevinc R.</p>
+                            <p class="text-xs text-amber-700">Pedaqoq, Gəncə ş.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm italic leading-relaxed mb-6">
+                            «Crown Wellness Club-dakı tanışlıq təqdimatı məni çox təsirləndirdi. Dərhal təlimə və Cyotish məsləhətinə yazıldım. TM texnikası heyrətamiz dərəcədə sadə çıxdı, Daşa dövrlərinin təhlili isə karyeramdakı mühüm mərhələni sakitliklə planlaşdırmağa kömək etdi».
+                        </p>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Nərminə S.</p>
+                            <p class="text-xs text-amber-700">Dizayner və marketoloq, Bakı ş.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. TEZ-TEZ VERİLƏN SUALLAR / FAQ (8 SUAL) (AZ) -->
+        <section id="faq-az" class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Tez-tez verilən suallara cavablar</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Təlimə başlamazdan əvvəl bilmək vacib olan hər şey</h2>
+                </div>
+                <div class="space-y-4">
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>1. Çox aktiv zehnim və daimi düşüncə axınım varsa, meditasiya etmək məndə alınacaqmı?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Bəli, mütləq alınacaq. Transsendental Meditasiyada biz ümumiyyətlə düşüncələri dayandırmağa və ya güclə konsentrasiyanı saxlamağa çalışmırıq. Texnika zehnin daha böyük sakitlik və məmnuniyyətə spontan can atmaq təbii xüsusiyyətindən istifadə edir, buna görə də hətta ən narahat zehin belə müəllimlə ilk fərdi məşğələdəcə asanlıqla sakitləşir.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>2. Niyə TM-i kitab, YouTube videosu və ya tətbiq vasitəsilə müstəqil öyrənmək olmaz?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Kitab oxuyarkən və ya audioyazıya qulaq asarkən insan qaçılmaz olaraq özünə nəzarət etməyə, prosesi qiymətləndirməyə və zehni səy göstərməyə başlayır ki, bu da beyni səthi səviyyədə saxlayır. Yalnız sertifikatlı TM müəllimi sizə uyğun mantranı necə fərdi seçməyi və sizi asan, səssiz transsendensiya təcrübəsindən necə keçirməyi bilir.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>3. Transsendental Meditasiyada mantra nədir?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            TM-də mantra — məna tərcüməsi olmayan, müəllim tərəfindən hər bir tələbə üçün fərdi seçilən xüsusi vedik səsdir. Onun yeganə vəzifəsi diqqətin aktiv düşüncədən tam daxili sükuta rəvan keçməsinə imkan verən yumşaq bələdçi («nəqliyyat vasitəsi») rolunu oynamaqdır.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>4. TM dinlə, fəlsəfə ilə və ya adət edilmiş həyat tərzindən imtina ilə bağlıdırmı?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Xeyr. Transsendental Meditasiya sinir sisteminin istirahəti və şüurun inkişafı üçün sırf praktiki elmi texnikadır. O, inancların, pəhrizin və ya həyat düzəninin dəyişdirilməsini tələb etmir və müxtəlif mədəniyyətlərə və dünyagörüşlərinə malik milyonlarla insan tərəfindən tətbiq olunur.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>5. Yerdə lotos pozasında oturmaq və ya ətrafda tam sükut gözləmək lazımdırmı?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Heç bir xüsusi poza tələb olunmur: TM sadəcə istənilən rahat kresloda və ya divanda gözlər bağlı halda oturaraq tətbiq edilir. Üstəlik, ətrafda mütləq sükut lazım deyil — adi məişət səs-küyü təcrübəyə mane olmur, buna görə də evdə, ofisdə, təyyarədə və ya qatarda meditasiya etmək olar.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>6. Çox sıx qrafikim varsa, gündə iki dəfə 20 dəqiqəni necə ayıra bilərəm?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Maharişinin dediyi kimi, bu, oxun sürətlə və dəqiq hədəfə uçması üçün əvvəlcə kamankarın ipini dartmağa bənzəyir. Səhər və axşam 20 dəqiqəlik meditasiya elə enerji və aydınlıq verir ki, gün ərzində işlərin öhdəsindən daha tez gəlir və saatlarla vaxta qənaət edirsiniz.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>7. Təcrübədən ilk nəticələri nə qədər tez hiss edəcəyəm?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Tələbələrin əksəriyyəti artıq ilk 4 təlim günündə dərin fiziki rahatlama, daxili sakitlik və gecə yuxusunun yaxşılaşmasını hiss edir. Hər növbəti həftə ilə effekt toplanır, sinir sistemini və stresə davamlılığı möhkəmləndirir.
+                        </p>
+                    </details>
+
+                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-md transition">
+                        <summary class="flex justify-between items-center font-serif font-bold text-lg text-slate-900 cursor-pointer">
+                            <span>8. Vedik astrologiya Cyotish üzrə məsləhətə yazılmaq üçün nə lazımdır?</span>
+                            <span class="text-amber-600 group-open:rotate-45 transition-transform text-2xl ml-4">+</span>
+                        </summary>
+                        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+                            Raşi (D1) natal xəritəsinin, Navamşa (D9) kəsir xəritəsinin dəqiq qurulması və Daşa dövrlərinin hesablanması üçün doğum tarixiniz, mümkün qədər dəqiq doğum vaxtınız və doğulduğunuz şəhər (məkan) lazımdır. Bunu WhatsApp-da qeydiyyat zamanı qeyd edə bilərsiniz.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. ƏLAQƏ VƏ GENİŞLƏNDİRİLMİŞ WHATSAPP QEYDİYYAT FORMASI (AZ) -->
         <section id="contact-az" class="py-20 bg-slate-900 text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-6">Azərbaycanda TM təliminə başlayın</h2>
-                        <p class="text-slate-300 mb-8 leading-relaxed">
-                            Bakı və ya Gəncədə növbəti tanışlıq mühazirəsinin tarixini öyrənmək və ya fərdi məsləhətə yazılmaq üçün birbaşa mənimlə əlaqə saxlayın.
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Müəllimlə birbaşa əlaqə</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">Bakı və ya Gəncədə TM təliminə başlayın</h2>
+                        <p class="text-slate-300 leading-relaxed">
+                            Növbəti tanışlıq mühazirəsinin tarixini öyrənmək, 4 günlük kursa yazılmaq və ya Cyotish məsləhəti sifariş etmək üçün qısa formanı doldurun və ya telefon və WhatsApp vasitəsilə birbaşa mənimlə əlaqə saxlayın.
                         </p>
-                        <div class="space-y-4">
+                        <div class="space-y-5 pt-2">
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold">📞</div>
+                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">📞</div>
                                 <div>
-                                    <p class="text-xs text-slate-400 uppercase">Telefon / WhatsApp</p>
+                                    <p class="text-xs text-slate-400 uppercase">Telefon və WhatsApp</p>
                                     <a href="tel:+994505331629" class="text-lg font-semibold hover:text-amber-400 transition">+994 50 533 16 29</a>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold">✉️</div>
+                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">✉️</div>
                                 <div>
                                     <p class="text-xs text-slate-400 uppercase">Elektron poçt</p>
                                     <a href="mailto:stepan0902@yahoo.com" class="text-lg font-semibold hover:text-amber-400 transition">stepan0902@yahoo.com</a>
                                 </div>
                             </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">🏛️</div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase">Məşğələlərin keçirilmə məkanları</p>
+                                    <p class="text-base font-medium text-slate-200">Bakı ş. (Crown Wellness Club) • Gəncə ş.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl">
-                        <h3 class="font-serif text-2xl font-bold mb-6">Mühazirəyə yazılmaq və ya sual vermək</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Adınız</label>
-                                <input type="text" placeholder="Adınızı daxil edin" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+
+                    <div class="lg:col-span-7">
+                        <div class="bg-slate-800 p-8 sm:p-10 rounded-3xl border border-slate-700 shadow-2xl">
+                            <h3 class="font-serif text-2xl font-bold mb-6">WhatsApp vasitəsilə sürətli qeydiyyat</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Adınız</label>
+                                        <input type="text" id="az-name" placeholder="Adınızı daxil edin" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Telefon nömrəniz</label>
+                                        <input type="tel" id="az-phone" placeholder="+994 ..." class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Şəhəriniz</label>
+                                        <select id="az-city" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                            <option value="Bakı">Bakı</option>
+                                            <option value="Gəncə">Gəncə</option>
+                                            <option value="Digər şəhər">Digər şəhər</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Maraqlandığınız istiqamət</label>
+                                        <select id="az-topic" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
+                                            <option value="TM kursu / Tanışlıq mühazirəsi">TM kursu / Tanışlıq mühazirəsi</option>
+                                            <option value="Cyotish məsləhəti">Cyotish məsləhəti</option>
+                                            <option value="Maharişi Asanaları">Maharişi Asanaları</option>
+                                            <option value="Təcrübənin yoxlanılması (çekinq)">Təcrübənin yoxlanılması (çekinq)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Sualınız və ya şərhiniz (istəyə bağlı)</label>
+                                    <textarea id="az-msg" rows="2" placeholder="Uyğun günləri və ya sualınızı yazın..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500"></textarea>
+                                </div>
+                                <button onclick="sendWhatsApp('az')" class="w-full py-4 rounded-xl bg-amber-600 text-white text-center font-bold hover:bg-amber-500 transition shadow-lg mt-2">
+                                    WhatsApp-a müraciət göndərmək
+                                </button>
+                                <p class="text-xs text-slate-400 text-center pt-1">Müəllimlə (+994 50 533 16 29) WhatsApp dialoqu açılacaq</p>
                             </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Telefon nömrəsi</label>
-                                <input type="text" placeholder="+994 ..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500">
-                            </div>
-                            <a href="https://wa.me/994505331629" target="_blank" class="w-full block py-4 rounded-xl bg-amber-600 text-white text-center font-semibold hover:bg-amber-700 transition shadow-lg">
-                                WhatsApp-a yazmaq
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -555,12 +1710,21 @@
         </section>
 
         <!-- ФУТЕР (AZ) -->
-        <footer class="py-8 bg-slate-950 text-slate-500 text-center text-sm border-t border-slate-800">
-            <p>© 2026 Stepan Qodına. Bütün hüquqlar qorunur. Azərbaycanda Transsendental Meditasiya.</p>
+        <footer class="py-10 bg-slate-950 text-slate-400 text-center text-sm border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 space-y-2">
+                <p class="font-serif text-white text-base">Qodına Stepan Nikolayeviç — Azərbaycanda Sertifikatlı Transsendental Meditasiya Müəllimi</p>
+                <p class="text-xs text-slate-500">© 2026 Bütün hüquqlar qorunur. Bakı və Gəncədə rəsmi TM kursları, Maharişi Asanaları və Cyotish məsləhətləri.</p>
+            </div>
         </footer>
     </div>
 
-    <!-- НАДЁЖНЫЙ СКРИПТ ПЕРЕКЛЮЧЕНИЯ ЯЗЫКОВ -->
+    <!-- ПЛАВАЮЩАЯ КНОПКА БЫСТРОЙ СВЯЗИ В WHATSAPP -->
+    <a href="https://wa.me/994505331629" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3.5 rounded-full shadow-2xl transition transform hover:scale-105">
+        <span class="text-lg">💬</span>
+        <span class="text-sm font-bold">WhatsApp</span>
+    </a>
+
+    <!-- СКРИПТЫ ПЕРЕКЛЮЧЕНИЯ ЯЗЫКОВ, МОБИЛЬНОГО МЕНЮ И ОТПРАВКИ В WHATSAPP -->
     <script>
         function switchLang(lang) {
             const ruPage = document.getElementById('page-ru');
@@ -570,14 +1734,42 @@
                 ruPage.classList.add('hidden');
                 azPage.classList.remove('hidden');
                 document.documentElement.lang = 'az';
-                document.title = 'Azərbaycanda Transsendental Meditasiya | Stepan Qodına';
+                document.title = 'Azərbaycanda Transsendental Meditasiya | Qodına Stepan Nikolayeviç';
             } else {
                 azPage.classList.add('hidden');
                 ruPage.classList.remove('hidden');
                 document.documentElement.lang = 'ru';
-                document.title = 'Трансцендентальная Медитация в Азербайджане | Степан Годына';
+                document.title = 'Трансцендентальная Медитация в Азербайджане | Годына Степан Николаевич';
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu(lang) {
+            const menu = document.getElementById('mobile-menu-' + lang);
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        function sendWhatsApp(lang) {
+            const phone = '994505331629';
+            let text = '';
+            if (lang === 'az') {
+                const name = document.getElementById('az-name').value || 'Qeyd edilməyib';
+                const userPhone = document.getElementById('az-phone').value || '';
+                const city = document.getElementById('az-city').value;
+                const topic = document.getElementById('az-topic').value;
+                const msg = document.getElementById('az-msg').value || '';
+                text = `Salam, Stepan Nikolayeviç!\nAdım: ${name}\nTelefon: ${userPhone}\nŞəhər: ${city}\nMövzu: ${topic}\n${msg ? 'Sual/Şərh: ' + msg : ''}`;
+            } else {
+                const name = document.getElementById('ru-name').value || 'Не указано';
+                const userPhone = document.getElementById('ru-phone').value || '';
+                const city = document.getElementById('ru-city').value;
+                const topic = document.getElementById('ru-topic').value;
+                const msg = document.getElementById('ru-msg').value || '';
+                text = `Здравствуйте, Степан Николаевич!\nИмя: ${name}\nТелефон: ${userPhone}\nГород: ${city}\nНаправление: ${topic}\n${msg ? 'Комментарий: ' + msg : ''}`;
+            }
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
 
